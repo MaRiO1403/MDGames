@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AdminActivity"
+    android:background="#c2d9fa">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Panel de Administración"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonAddVJuego"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        app:icon="@drawable/add_circle_outline"
+        android:text="Agregar VJuego"
+        android:backgroundTint="#324e95"
+        app:cornerRadius="8dp"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonModifVJuego"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:icon="@drawable/edit"
+        android:text="Modificar VJuego"
+        android:backgroundTint="#324e95"
+        app:cornerRadius="8dp"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAddVJuego"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonReponerVJuego"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:icon="@drawable/autorenew"
+        android:text="Reponer VJuego"
+        android:backgroundTint="#324e95"
+        app:cornerRadius="8dp"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonModifVJuego"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:backgroundTint="#b81717"
+        app:icon="@drawable/logout"
+        android:text="Cerrar Sesión"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="8dp"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonReponerVJuego"
+        android:fontFamily="@font/poppins_regular"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

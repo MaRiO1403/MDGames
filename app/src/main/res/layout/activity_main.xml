@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#c2d9fa">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/topbar_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="167dp"
+            android:layout_height="107dp"
+            android:contentDescription="Logo de la tienda"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.473" />
+
+        <ImageButton
+            android:id="@+id/botonLupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/search"
+            app:tint="@android:color/white"
+            android:contentDescription="Buscar"
+            app:layout_constraintEnd_toStartOf="@id/botonCarrito"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="25dp" />
+
+        <ImageButton
+            android:id="@+id/botonCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/add_shopping_cart"
+            app:tint="@android:color/white"
+            android:contentDescription="Buscar"
+            app:layout_constraintEnd_toStartOf="@id/botonFav"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="25dp" />
+
+        <ImageButton
+            android:id="@+id/botonFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/fav"
+            app:tint="@android:color/white"
+            android:contentDescription="Buscar"
+            app:layout_constraintEnd_toStartOf="@id/botonPerfil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="25dp" />
+
+        <ImageButton
+            android:id="@+id/botonPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/person"
+            app:tint="@android:color/white"
+            android:contentDescription="Perfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/sideMenu"
+        android:layout_width="250dp"
+        android:layout_height="450dp"
+        android:elevation="9dp"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:translationX="0dp"
+        android:visibility="gone"
+        android:background="@drawable/topbar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Ícono de perfil grande -->
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/account_circle"
+            android:contentDescription="Ícono de perfil" />
+
+        <!-- Título PERFIL -->
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_horizontal"
+            android:text="Perfil"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btnMisPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:text="Mis pedidos"
+                app:icon="@drawable/list"
+                android:backgroundTint="#283f79"
+                android:fontFamily="@font/poppins_regular"
+                app:iconPadding="8dp" />
+
+            <Button
+                android:id="@+id/btnEditarPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Editar Perfil"
+                app:icon="@drawable/edit"
+                android:backgroundTint="#283f79"
+                android:fontFamily="@font/poppins_regular"
+                app:iconPadding="8dp" />
+
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar sesión"
+                android:backgroundTint="#b81717"
+                app:icon="@drawable/logout"
+                android:fontFamily="@font/poppins_regular"
+                app:iconPadding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/customTopBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:textStyle="bold"
+                android:text="Busca los videojuegos por plataforma"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginBottom="8dp"
+                android:textColor="#000000"/>
+
+            <ImageButton
+                android:id="@+id/botonPS5"
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_border_blue"
+                android:src="@drawable/ps5_logo"
+                android:tag="PlayStation 5"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageButton
+                android:id="@+id/botonNS"
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/button_border_red"
+                android:src="@drawable/nintendoswitch_logo"
+                android:tag="Nintendo Switch"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageButton
+                android:id="@+id/botonXbox"
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/button_border_green"
+                android:src="@drawable/xbox_logo"
+                android:tag="Xbox Series X|S"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageButton
+                android:id="@+id/botonSteam"
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/button_border_black"
+                android:src="@drawable/steam_logo"
+                android:tag="Steam"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="10dp"/>
+
+
+            <ImageButton
+                android:id="@+id/botonPS4"
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/button_border_blue"
+                android:src="@drawable/ps4_logo"
+                android:tag="PlayStation 4"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
