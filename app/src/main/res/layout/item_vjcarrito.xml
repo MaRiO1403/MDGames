@@ -99,9 +99,12 @@
                     android:text=""
                     app:icon="@drawable/bin"
                     app:iconTint="@android:color/white"
+                    app:iconGravity="textStart"
+                    android:gravity="center"
                     app:cornerRadius="8dp"
-                    android:padding="18dp"/>
-
+                    android:padding="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
